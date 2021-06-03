@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+body {
+  background-color: #181818;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header svg {
+  margin-top: 50px;
+  -webkit-filter: drop-shadow(0.15rem 0.15rem 2rem #f535aa);
+          filter: drop-shadow(0.15rem 0.15rem 2rem #f535aa);
+}
+
+.game {
+  max-width: 1000px;
+  max-height: 1000px;
+  margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.dino-game {
+  margin: 300px auto;
+  max-width: 600px;
+  width: 100%;
+  height: 200px;
+  border-bottom: 5px solid #275225;
+  display: none;
+  position: relative;
+}
+
+.play {
+  position: absolute;
+  z-index: 30px;
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.dino {
+  width: 100px;
+  height: 100px;
+  background-image: url(../images/dino-cristi.png);
+  background-size: 100px 100px;
+  position: relative;
+  bottom: -95px;
+  left: 50px;
+}
+
+.cactus {
+  width: 100px;
+  height: 100px;
+  background-image: url(../images/cactus.png);
+  background-size: 100px 100px;
+  position: relative;
+  bottom: 5px;
+  left: 500px;
+  display: none;
+  -webkit-animation: cactusMov 2s infinite linear;
+          animation: cactusMov 2s infinite linear;
+}
+
+@-webkit-keyframes cactusMov {
+  0% {
+    left: 580px;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+@keyframes cactusMov {
+  0% {
+    left: 580px;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+.jump {
+  -webkit-animation: jump 1s linear;
+          animation: jump 1s linear;
+}
+
+@-webkit-keyframes jump {
+  0% {
+    bottom: -95px;
+  }
+  10% {
+    bottom: -65px;
+  }
+  20% {
+    bottom: -35px;
+  }
+  30% {
+    bottom: -5px;
+  }
+  40% {
+    bottom: 30px;
+  }
+  50% {
+    bottom: 50px;
+  }
+  60% {
+    bottom: 30px;
+  }
+  70% {
+    bottom: -5px;
+  }
+  80% {
+    bottom: -35px;
+  }
+  90% {
+    bottom: -65px;
+  }
+  100% {
+    bottom: -95px;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: -95px;
+  }
+  10% {
+    bottom: -65px;
+  }
+  20% {
+    bottom: -35px;
+  }
+  30% {
+    bottom: -5px;
+  }
+  40% {
+    bottom: 30px;
+  }
+  50% {
+    bottom: 50px;
+  }
+  60% {
+    bottom: 30px;
+  }
+  70% {
+    bottom: -5px;
+  }
+  80% {
+    bottom: -35px;
+  }
+  90% {
+    bottom: -65px;
+  }
+  100% {
+    bottom: -95px;
+  }
+}
+
+.forSwiper {
+  display: none;
+}
+
+.swiper-container {
+  width: 300px;
+  height: 300px;
+  padding: 50px;
+  margin-top: 100px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.key {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.key img {
+  width: 80px;
+  height: 80px;
+  display: none;
+  cursor: pointer;
+}
